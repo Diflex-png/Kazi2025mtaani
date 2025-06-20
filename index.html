@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<url>climateworkx.com</url>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Climate Worx Registration</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5faff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .logo {
+      width: 80px;
+      margin: 20px auto;
+    }
+    h1, h2 {
+      color: #1b3a57;
+    }
+    .blue-btn, .green-btn {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .blue-btn {
+      background-color: #0057ff;
+      color: white;
+    }
+    .green-btn {
+      background-color: #28c745;
+      color: white;
+    }
+    .form-section {
+      display: none;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .note {
+      font-size: 14px;
+      color: #d9534f;
+      margin-top: 10px;
+    }
+    .payment-box {
+      background-color: #fff0e6;
+      border-left: 4px solid #f36f21;
+      padding: 15px;
+      margin: 15px 0;
+      text-align: left;
+    }
+    .step-icons {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 15px;
+    }
+    .step-icons span {
+      font-size: 24px;
+      color: #ccc;
+    }
+    .step-icons span.active {
+      color: #0057ff;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Step 1: Payment Notice -->
+<div class="container" id="payment-page">
+  <img src="https://i.ibb.co/xMJfd2v/climateworx-logo.png" class="logo" />
+  <h1>Climate Worx</h1>
+  <h2>Climate Resilience Service Program</h2>
+  <h3><i>Through Climate Work, we are not just offering paycheck for today; we are providing financial relief and a bridge to future opportunities enabling young people to pursue their next steps whether in launching a business, furthering their education or stepping into long term employment."
+~ His Excellency Dr. William Samoei Ruto, C.G.H.,
+President of the Republic of Kenya and Commander-in-Chief of the Defence Forces</i></h3>
+  <div class="payment-box">
+    <p><strong>IMPORTANT:</strong> To register, you must first pay the late  registration fee of <strong>KES 50</strong>.</p>
+    <p><strong>How to Pay via M-PESA:</strong></p>
+    <ul>
+      <li>Go to <strong>M-PESA → Lipa na M-PESA → Send Money</strong></li>
+      <li><strong>Phone Number:</strong> 0740338345</li>
+      <li><strong>Amount:</strong> KES 50</li>
+      <li><strong>Account Name:</strong> Diphlex Climate Worx</li>
+    </ul>
+    <p class="note">After payment, click the button below to continue with registration.This is to qualify you for late registration</p>
+  </div>
+  <button class="green-btn" onclick="nextPage('personal-form')">I Have Paid - Proceed to Register</button>
+</div>
+
+<!-- Step 2: Personal Info -->
+<div class="container form-section" id="personal-form">
+  <img src="https://i.ibb.co/xMJfd2v/climateworx-logo.png" class="logo" />
+  <h2>Sign in to your account</h2>
+  <div class="step-icons">
+    <span class="active">👤</span>
+    <span>📍</span>
+    <span>📄</span>
+    <span>🔒</span>
+  </div>
+  <form onsubmit="event.preventDefault(); nextPage('address-form')">
+    <label>First Name *</label>
+    <input type="text" required />
+
+    <label>Middle Name</label>
+    <input type="text" />
+
+    <label>Last Name *</label>
+    <input type="text" required />
+
+    <label>National ID / Maisha Number *</label>
+    <input type="text" required />
+
+    <label>Telephone *(Safaricom Only)</label>
+    <input type="tel" required />
+
+    <label>Email</label>
+    <input type="email" />
+
+    <label>Date of Birth *</label>
+    <input type="date" required />
+
+    <label>Gender *</label>
+    <select required>
+      <option value="">Select Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
+    <button type="submit upon payment" class="blue-btn">Next: Address Information</button>
+  </form>
+</div>
+
+<!-- Step 3: Address Info -->
+<div class="container form-section" id="address-form">
+  <img src="https://i.ibb.co/xMJfd2v/climateworx-logo.png" class="logo" />
+  <h2>Sign in to your account</h2>
+  <div class="step-icons">
+    <span>👤</span>
+    <span class="active">📍</span>
+    <span>📄</span>
+    <span>🔒</span>
+  </div>
+  <form onsubmit="event.preventDefault(); alert('Registration submitted successfully!');">
+    <label>Region *</label>
+    <select required>
+      <option value="">Select Region</option>
+      <option>Central</option>
+      <option>Eastern</option>
+      <option>Nairobi</option>
+      <option>Coast</option>
+      <option>Western</option>
+      <option>Nyanza</option>
+      <option>Rift Valley</option>
+      <option>North Eastern</option>
+    </select>
+
+    <label>County *</label>
+    <select required>
+      <option value="">Select County</option>
+      <option>Nairobi</option>
+      <option>Mombasa</option>
+      <option>Kisumu</option>
+      <option>Kiambu</option>
+      <option>Uasin Gishu</option>
+    </select>
+
+    <label>Sub-County *</label>
+    <select required>
+      <option value="">Select Sub-County</option>
+      <option>Lang’ata</option>
+      <option>Westlands</option>
+      <option>Ruiru</option>
+      <option>Nyali</option>
+    </select>
+
+    <button type="submit" class="blue-btn">Submit Registration</button>
+  </form>
+</div>
+
+<script>
+  function nextPage(sectionId) {
+    document.querySelectorAll('.form-section, #payment-page').forEach(section => {
+      section.style.display = 'none';
+    });
+    document.getElementById(sectionId).style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
